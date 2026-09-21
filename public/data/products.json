@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Zapatito Bebé Azul",
+    "description": "Zapatilla tipo lona en azul vibrante",
+    "price": 12500,
+    "image": "/img/footwear/bebe-azul.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 2,
+    "name": "Zapatito Bebé Rosa",
+    "description": "Zapatos estilo Guillermina en color rosa",
+    "price": 12500,
+    "image": "/img/footwear/bebe-rosa.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 3,
+    "name": "Sandalia Dama Verano",
+    "description": "Sandalias de tacón alto en cuero texturado",
+    "price": 28900,
+    "image": "/img/footwear/sandalia.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 4,
+    "name": "Zapatilla Urbana Blanca",
+    "description": "Zapatillas urbanas clásicas de color blanco",
+    "price": 32500,
+    "image": "/img/footwear/zapatilla-blanca.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 5,
+    "name": "Botín Dama Negro",
+    "description": "Botines de cuero sintético con taco medio",
+    "price": 45900,
+    "image": "/img/footwear/botin-negro.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 6,
+    "name": "Ballerina Rosa",
+    "description": "Ballerinas cómodas en color rosa pastel",
+    "price": 23900,
+    "image": "/img/footwear/ballerina-rosa.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 7,
+    "name": "Sandalia Plana Beige",
+    "description": "Sandalias planas ideales para el verano",
+    "price": 21900,
+    "image": "/img/footwear/sandalia-beige.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 8,
+    "name": "Mocasín Dama Marrón",
+    "description": "Mocasines clásicos de estilo elegante",
+    "price": 35900,
+    "image": "/img/footwear/mocasin-marron.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 9,
+    "name": "Zapatilla Running Dama",
+    "description": "Zapatillas deportivas livianas para running",
+    "price": 42900,
+    "image": "/img/footwear/running-dama.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 10,
+    "name": "Bota Dama Marrón",
+    "description": "Botas altas de estilo clásico en color marrón",
+    "price": 58900,
+    "image": "/img/footwear/bota-marron.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 11,
+    "name": "Zapatilla Hombre Negra",
+    "description": "Zapatillas urbanas negras de uso diario",
+    "price": 38900,
+    "image": "/img/footwear/hombre-negra.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 12,
+    "name": "Zapatilla Hombre Blanca",
+    "description": "Zapatillas casuales blancas de diseño moderno",
+    "price": 39900,
+    "image": "/img/footwear/hombre-blanca.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 13,
+    "name": "Mocasín Hombre Negro",
+    "description": "Mocasines elegantes para ocasiones especiales",
+    "price": 44900,
+    "image": "/img/footwear/mocasin-hombre.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 14,
+    "name": "Zapato Hombre Marrón",
+    "description": "Zapatos clásicos de cuero en color marrón",
+    "price": 52900,
+    "image": "/img/footwear/zapato-marron.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 15,
+    "name": "Bota Hombre Outdoor",
+    "description": "Botas resistentes ideales para actividades al aire libre",
+    "price": 63900,
+    "image": "/img/footwear/bota-hombre.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 16,
+    "name": "Sandalia Hombre",
+    "description": "Sandalias cómodas y livianas para verano",
+    "price": 26900,
+    "image": "/img/footwear/sandalia-hombre.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 17,
+    "name": "Zapatilla Niño Azul",
+    "description": "Zapatillas infantiles azules con cierre de velcro",
+    "price": 18900,
+    "image": "/img/footwear/nino-azul.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 18,
+    "name": "Zapatilla Niña Rosa",
+    "description": "Zapatillas infantiles rosas con detalles decorativos",
+    "price": 19500,
+    "image": "/img/footwear/nina-rosa.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 19,
+    "name": "Botita Infantil Marrón",
+    "description": "Botitas infantiles abrigadas para invierno",
+    "price": 24900,
+    "image": "/img/footwear/botita-infantil.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 20,
+    "name": "Sandalia Infantil Azul",
+    "description": "Sandalias infantiles cómodas y frescas",
+    "price": 16900,
+    "image": "/img/footwear/sandalia-infantil.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 21,
+    "name": "Guillermina Infantil Roja",
+    "description": "Guillerminas clásicas para niñas en color rojo",
+    "price": 17900,
+    "image": "/img/footwear/guillermina-roja.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 22,
+    "name": "Zapatilla Escolar Negra",
+    "description": "Zapatillas escolares resistentes de color negro",
+    "price": 22900,
+    "image": "/img/footwear/escolar-negra.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 23,
+    "name": "Zapatilla Dama Rosa",
+    "description": "Zapatillas deportivas en rosa con suela liviana",
+    "price": 36900,
+    "image": "/img/footwear/dama-rosa.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 24,
+    "name": "Bota Dama Negra",
+    "description": "Botas negras con plataforma y diseño moderno",
+    "price": 54900,
+    "image": "/img/footwear/bota-negra.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 25,
+    "name": "Sandalia Dama Dorada",
+    "description": "Sandalias elegantes con detalles dorados",
+    "price": 29900,
+    "image": "/img/footwear/sandalia-dorada.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 26,
+    "name": "Zapatilla Running Hombre",
+    "description": "Zapatillas deportivas con amortiguación y diseño liviano",
+    "price": 46900,
+    "image": "/img/footwear/running-hombre.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 27,
+    "name": "Mocasín Hombre Azul",
+    "description": "Mocasines casuales en color azul marino",
+    "price": 41900,
+    "image": "/img/footwear/mocasin-azul.jpg",
+    "category": "caballero"
+  },
+  {
+    "id": 28,
+    "name": "Zapatilla Infantil Verde",
+    "description": "Zapatillas infantiles deportivas en color verde",
+    "price": 19900,
+    "image": "/img/footwear/nino-verde.jpg",
+    "category": "infantil"
+  },
+  {
+    "id": 29,
+    "name": "Botín Dama Beige",
+    "description": "Botines beige con taco bajo y diseño elegante",
+    "price": 43900,
+    "image": "/img/footwear/botin-beige.jpg",
+    "category": "dama"
+  },
+  {
+    "id": 30,
+    "name": "Zapato Hombre Formal Negro",
+    "description": "Zapatos formales negros ideales para eventos y oficina",
+    "price": 49900,
+    "image": "/img/footwear/formal-negro.jpg",
+    "category": "caballero"
+  }
+]
