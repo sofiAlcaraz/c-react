@@ -1,3 +1,4 @@
+import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 
@@ -23,7 +24,7 @@ const ItemListContainer = () => {
   if (error) return <p>No se encontraron productos</p>;
 
   return (
-    <section>
+    <section className="section-produsts-list">
       <h1>Productos</h1>
       <ItemList products={products} />
     </section>

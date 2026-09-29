@@ -1,0 +1,6 @@
+.section-produsts-list h1 {
+  display: flex;
+  padding-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+}

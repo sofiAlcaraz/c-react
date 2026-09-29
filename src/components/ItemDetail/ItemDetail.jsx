@@ -4,7 +4,9 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="detail-wrapper">
       <Item {...item}>
-        <button className="btn">Agregar al carrito</button>
+        <button onClick={() => console.log("Se agrego item!")} className="btn">
+          Agregar al carrito
+        </button>
       </Item>
     </div>
   );

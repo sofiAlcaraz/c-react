@@ -1,3 +1,4 @@
+import "./ItemDetailContainer.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -8,11 +9,10 @@ const ItemDetailContainer = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  //pedir info con id
   useEffect(() => {
-    //setItemDetail(null);
-    //setLoading(true);
+    //setLoading(true); ME TIRA UN ERROR :(
     //setError(null);
+    //setItemDetail(null);
 
     fetch("/data/products.json")
       .then((res) => res.json())
@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
   return (
     <section>
       <h1>Detalle del Producto</h1>
-      <div className="products-constainer">
+      <div className="products-container">
         <ItemDetail item={itemDetail} />
       </div>
     </section>

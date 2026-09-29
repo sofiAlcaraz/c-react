@@ -1,0 +1,12 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  gap: 1rem;
+  background-color: rgb(219, 214, 214);
+  padding: 1.5rem;
+  border-radius: 30px;
+}
+.card img {
+  border-radius: 30px;
+}
