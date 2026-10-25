@@ -1,10 +1,12 @@
+import { useCart } from "../context/CartContext";
 import Item from "../Item/Item";
 
 const ItemDetail = ({ item }) => {
+  const { addItem } = useCart();
   return (
     <div className="detail-wrapper">
       <Item {...item}>
-        <button onClick={() => console.log("Se agrego item!")} className="btn">
+        <button onClick={() => addItem(item)} className="btn">
           Agregar al carrito
         </button>
       </Item>
