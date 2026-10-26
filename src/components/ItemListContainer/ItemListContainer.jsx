@@ -1,19 +1,18 @@
 import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
+import { getByCategory } from "../../services/productsService";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
+  const { category } = useParams();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    fetch("/data/products.json")
-      .then((res) => res.json())
+    getByCategory(category)
       .then((data) => {
-        if (!data) {
-          throw new Error("productos no encontrados");
-        }
         setProducts(data);
       })
       .catch((error) => setError(error.message))
