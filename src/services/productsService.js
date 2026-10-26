@@ -45,6 +45,7 @@ export const getProductById = async (id) => {
   }
 };
 export const getByCategory = async (category) => {
+  //AGREGAR CATEGORIAS
   try {
     let queryRef;
 
@@ -69,7 +70,7 @@ export const createProduct = async (productData) => {
   try {
     const docRef = await addDoc(productsRef, productData);
 
-    return docRef.id;
+    return docRef.id; //AGREGAR VISTA DE EXITO O QUE ME LLEVE A ESA PESTAÑA
   } catch (error) {
     console.error("Error al crear producto:", error);
     throw error;
