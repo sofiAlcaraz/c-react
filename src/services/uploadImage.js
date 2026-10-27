@@ -4,13 +4,18 @@ export const uploadImage = async (file) => {
 
   try {
     const response = await fetch(
-      `${import.meta.env.ENDPOINT}?key=${import.meta.env.IMGBB_API_KEY}`,
+      `${import.meta.env.VITE_ENDPOINT}?key=${import.meta.env.VITE_IMGBB_API_KEY}`,
       {
         method: "POST",
         body: formData,
       },
     );
-
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(
+        `Error del servidor (${response.status}): ${errorText || "Respuesta vacía"}`,
+      );
+    }
     const data = await response.json();
 
     if (!data.success) {
