@@ -51,7 +51,6 @@ export const ProductFormContainer = () => {
       };
       //alta de producto
       const id = await createProduct(productData);
-
       //reseterar el formulario
       setProduct({ name: "", price: "", category: "", description: "" });
       setFile(null);
