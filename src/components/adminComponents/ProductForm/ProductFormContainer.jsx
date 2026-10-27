@@ -28,7 +28,7 @@ export const ProductFormContainer = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.prevenDefault();
+    e.preventDefault();
     //seteo
     setErrors({});
     setLoading(true);
@@ -57,8 +57,6 @@ export const ProductFormContainer = () => {
       setFile(null);
       //navegar a la pagina de exito
       navigate(`/admin/products/success/${id}`, { replace: true }); //remplace la url anterior y lo anteirior no quede en el historial de navegacion
-
-      //set loading chau
     } catch (error) {
       setErrors({ general: error.message });
     } finally {
