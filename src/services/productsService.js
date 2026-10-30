@@ -8,6 +8,7 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "../firebase/config";
+import { addCategorie } from "./categorysService";
 
 const productsRef = collection(db, "products");
 
@@ -68,8 +69,8 @@ export const getByCategory = async (category) => {
 
 export const createProduct = async (productData) => {
   try {
+    await addCategorie(productData.category);
     const docRef = await addDoc(productsRef, productData);
-
     return docRef.id; //AGREGAR VISTA DE EXITO O QUE ME LLEVE A ESA PESTAÑA
   } catch (error) {
     console.error("Error al crear producto:", error);
