@@ -27,7 +27,7 @@ export const getCategories = async () => {
 
 export const addCategorie = async (category) => {
   try {
-    // Psamos nombre de la categoría directamente como el ID del documento
+    // Pasamos nombre de la categoría directamente como el ID del documento
     const categoryRef = doc(categoriesRef, category);
 
     // setDoc con { merge: true } actualiza si existe o crea si no existe.
