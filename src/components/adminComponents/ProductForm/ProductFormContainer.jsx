@@ -43,7 +43,7 @@ export const ProductFormContainer = () => {
     try {
       //subir imagen
       const imageUrl = await uploadImage(file);
-      //armar estrucuta del producto
+      //armar estructura del producto
       const productData = {
         ...product,
         price: Number(product.price), //toma el ultimo valor de price, sobreescribe, si existe el ultimo valor
@@ -51,11 +51,11 @@ export const ProductFormContainer = () => {
       };
       //alta de producto
       const id = await createProduct(productData);
-      //reseterar el formulario
+      //resetear el formulario
       setProduct({ name: "", price: "", category: "", description: "" });
       setFile(null);
       //navegar a la pagina de exito
-      navigate(`/admin/products/success/${id}`, { replace: true }); //remplace la url anterior y lo anteirior no quede en el historial de navegacion
+      navigate(`/admin/products/success/${id}`, { replace: true }); //remplace la url anterior para que lo anterior no quede en el historial de navegacion
     } catch (error) {
       setErrors({ general: error.message });
     } finally {

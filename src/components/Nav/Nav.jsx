@@ -24,4 +24,3 @@ const Nav = () => {
   );
 };
 export default Nav;
-//Implementaste la interactividad en el Navbar para indicar la sección activa

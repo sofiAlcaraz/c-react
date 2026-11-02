@@ -20,7 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-//agrego
+//Agrego para el Login
 const db = getFirestore(app);
 const auth = getAuth(app);
 export { db, auth };

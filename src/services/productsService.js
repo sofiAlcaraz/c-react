@@ -71,7 +71,7 @@ export const createProduct = async (productData) => {
   try {
     await addCategorie(productData.category);
     const docRef = await addDoc(productsRef, productData);
-    return docRef.id; //AGREGAR VISTA DE EXITO O QUE ME LLEVE A ESA PESTAÑA
+    return docRef.id;
   } catch (error) {
     console.error("Error al crear producto:", error);
     throw error;

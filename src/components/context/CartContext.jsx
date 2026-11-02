@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-//creao contexto
+//creo contexto
+//El contexto evita el  prop Drilling,el pasamanos de propiedades
 const CartContext = createContext();
 //custom hook
 export const useCart = () => {
@@ -15,7 +16,7 @@ export const CartProvider = ({ children }) => {
   const navigate = useNavigate();
   const [cart, setCart] = useState([]);
 
-  //returna true o false
+  //retorna true o false
   const isInCart = (item) => {
     const inCart = cart.some((element) => element.id === item.id);
     return inCart;
