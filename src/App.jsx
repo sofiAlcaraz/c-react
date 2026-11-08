@@ -1,33 +1,45 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartView } from "./components/Cart/CartView";
 import { ProductFormContainer } from "./components/adminComponents/ProductForm/ProductFormContainer";
 import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
+import { PublicLayout } from "./layouts/PublicLayout";
+import { AdminLayout } from "./layouts/AdminLayout";
+import { Login } from "./components/Login/Login";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
+import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
 
 function App() {
   return (
     <>
-      <Header />
-      <main className="app-container">
-        <Routes>
+      <Routes>
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<h1>Bienvenido</h1>} />
           <Route path="/products" element={<ItemListContainer />} />
           <Route path="/cart" element={<CartView />} />
           <Route path="/products/:id" element={<ItemDetailContainer />} />
           <Route path="/category/:category" element={<ItemListContainer />} />
-          {/*Rutas Admin*/}
-          <Route path="/admin" element={<ProductFormContainer />} />
-          <Route
-            path="/admin/products/success/:id"
-            element={<ProductSuccess />}
-          />
-        </Routes>
-      </main>
-      <Footer />
+        </Route>
+        {/*Ruta Login*/}
+        <Route path="/admin" element={<Login />} />
+        {/*Rutas Admin*/}
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          {/*El index de admin es ir al dashboard */}
+          <Route index element={<Navigate to={"dashboard"} />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="product/new" element={<ProductFormContainer />} />
+          <Route path="products/success/:id" element={<ProductSuccess />} />
+        </Route>
+      </Routes>
     </>
   );
 }
