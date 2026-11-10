@@ -23,7 +23,7 @@ function App() {
           <Route path="/category/:category" element={<ItemListContainer />} />
         </Route>
         {/*Ruta Login*/}
-        <Route path="/admin" element={<Login />} />
+        <Route path="/admin/login" element={<Login />} />
         {/*Rutas Admin*/}
         <Route
           path="/admin"
@@ -36,7 +36,7 @@ function App() {
           {/*El index de admin es ir al dashboard */}
           <Route index element={<Navigate to={"dashboard"} />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="product/new" element={<ProductFormContainer />} />
+          <Route path="products/new" element={<ProductFormContainer />} />
           <Route path="products/success/:id" element={<ProductSuccess />} />
         </Route>
       </Routes>
