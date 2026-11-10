@@ -26,8 +26,8 @@ export const Login = () => {
     }
   };
   return (
-    <div className="contenedor">
-      <form onSubmit={handleSubmit} className="formulario-login">
+    <div className="container">
+      <form onSubmit={handleSubmit} className="form-login">
         <h2>Iniciar sesión</h2>
         <div>
           <label>Email</label>
