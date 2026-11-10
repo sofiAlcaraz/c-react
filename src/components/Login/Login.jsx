@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
+import "./Login.css";
 
 export const Login = () => {
   //hacer formulario de error
@@ -25,31 +26,33 @@ export const Login = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Iniciar sesión</h2>
-      <div>
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="correo electronico"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="contraseña"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <button type="submit">Ingresar</button>
-    </form>
+    <div className="contenedor">
+      <form onSubmit={handleSubmit} className="formulario-login">
+        <h2>Iniciar sesión</h2>
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="correo electronico"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="contraseña"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
   );
 };
