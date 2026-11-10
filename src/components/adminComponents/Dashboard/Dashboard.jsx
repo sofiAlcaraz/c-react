@@ -42,12 +42,6 @@ export const Dashboard = () => {
         <h3>Acciones rapidas</h3>
         <div className="action-section-options">
           <Link to="/admin/products/new">Cargar +</Link>
-          <Link to="#" disabled>
-            Modificar
-          </Link>
-          <Link to="#" disabled>
-            Eliminar
-          </Link>
         </div>
       </section>
       <section className="item-list-container">
