@@ -8,7 +8,7 @@ export const ProductSuccess = () => {
       <p>Id del producto: {id}</p>
       <p>Puede cargar otro haciendo click en el boton</p>
       <div>
-        <Link to={`/admin/products/new`}>Cargar otro producto</Link>
+        <Link to={`/admin`}>Cargar otro producto</Link>
       </div>
     </section>
   );
