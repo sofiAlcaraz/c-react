@@ -1,6 +1,7 @@
 import {
   addDoc,
   collection,
+  deleteDoc,
   doc,
   getDoc,
   getDocs,
@@ -74,6 +75,15 @@ export const createProduct = async (productData) => {
     return docRef.id;
   } catch (error) {
     console.error("Error al crear producto:", error);
+    throw error;
+  }
+};
+
+export const removeProduct = async (id) => {
+  try {
+    await deleteDoc(doc(productsRef, id));
+  } catch (error) {
+    console.log("Error al borrar producto", error);
     throw error;
   }
 };

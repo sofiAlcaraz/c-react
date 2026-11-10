@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 1rem;
+}
+.action-section {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.action-section-options {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.help-section {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
