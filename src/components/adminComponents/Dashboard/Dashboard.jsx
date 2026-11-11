@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "./Dashboard.css";
 import { useEffect, useState } from "react";
@@ -10,6 +10,7 @@ export const Dashboard = () => {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getProducts()
@@ -29,6 +30,9 @@ export const Dashboard = () => {
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   };
+  const onClickEdit = (id) => {
+    navigate(`/admin/product/edit/${id}`);
+  };
   return (
     <div className="dashboard-container">
       <header>
@@ -45,7 +49,11 @@ export const Dashboard = () => {
         </div>
       </section>
       <section className="item-list-container">
-        <ItemList onClickRemove={onClickRemove} products={products} />
+        <ItemList
+          onClickRemove={onClickRemove}
+          onClickEdit={onClickEdit}
+          products={products}
+        />
       </section>
       <section className="help-section">
         <h3>Ayuda</h3>

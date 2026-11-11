@@ -1,5 +1,5 @@
 import "./ItemList.css";
-const ItemList = ({ products, onClickRemove }) => {
+const ItemList = ({ products, onClickRemove, onClickEdit }) => {
   if (!products) {
     return <p>no hay productos</p>;
   }
@@ -10,7 +10,7 @@ const ItemList = ({ products, onClickRemove }) => {
           <p>{product.name}</p>
           <p>{product.id}</p>
           <div className="button-container">
-            <button>Editar</button>
+            <button onClick={() => onClickEdit(product.id)}>Editar</button>
             <button onClick={() => onClickRemove(product.id)}>Eliminar</button>
           </div>
         </li>

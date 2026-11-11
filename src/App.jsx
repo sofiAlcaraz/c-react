@@ -10,6 +10,7 @@ import { AdminLayout } from "./layouts/AdminLayout";
 import { Login } from "./components/Login/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
+import ProductEdit from "./components/adminComponents/ProductEdit/ProductEdit";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="products/new" element={<ProductFormContainer />} />
           <Route path="products/success/:id" element={<ProductSuccess />} />
+          <Route path="product/edit/:id" element={<ProductEdit />} />
         </Route>
       </Routes>
     </>
