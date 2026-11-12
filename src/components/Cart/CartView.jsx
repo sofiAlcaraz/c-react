@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { CartList } from "./CartList";
 import { CartSummary } from "./CartSummary";
+import "./Cart.css";
 
 export const CartView = () => {
   const { cart } = useCart();
@@ -15,7 +16,7 @@ export const CartView = () => {
         </>
       ) : (
         <>
-          <p>El carrito esta vacio</p>
+          <p>El carrito esta vacío</p>
           <Link to="/">Volver</Link>
         </>
       )}

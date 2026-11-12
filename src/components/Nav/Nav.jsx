@@ -16,7 +16,7 @@ const Nav = () => {
         <li>
           <Link to="/cart">
             Carrito
-            {totalItems > 0 && <span className="incart">{totalItems}</span>}
+            {totalItems > 0 && <span className="incart"> {totalItems}</span>}
           </Link>
         </li>
       </ul>
