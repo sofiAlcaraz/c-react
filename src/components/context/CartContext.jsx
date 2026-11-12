@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
       return;
     }
     setCart([...cart, item]);
-    alert("El producto fuie agregado al carrito");
+    alert("El producto fue agregado al carrito");
   };
 
   const removeItem = (id) => {
@@ -45,7 +45,7 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((acc, element) => acc + element.price, 0);
   };
   const checkout = () => {
-    alert("su compra se ha realizado cone exito");
+    alert("su compra se ha realizado con exito");
     clearCart();
     navigate("/");
   };
