@@ -1,5 +1,6 @@
 import { useCart } from "../context/CartContext";
 import Item from "../Item/Item";
+import "./ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
   const { addItem } = useCart();

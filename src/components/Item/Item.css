@@ -1,12 +1,31 @@
 .card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  /* --- Controlá el tamaño máximo de la caja --- */
+  width: 100%;
+  max-width: 50%; /* Evita que la tarjeta se vuelva gigante en pantallas grandes */
+  margin: 0 auto; /* Centra la tarjeta si está sola en una sección */
+
+  /* Tus estilos originales */
   color: black;
   gap: 1rem;
   background-color: rgb(219, 214, 214);
   padding: 1.5rem;
   border-radius: 30px;
 }
+
 .card img {
-  border-radius: 30px;
+  display: block;
+  width: 100%;
+  object-fit: contain; /* Muestra la ojota completa sin deformarla */
+  border-radius: 20px;
+}
+
+/* Esto solo se aplica a las tarjetas que están DENTRO de la grilla de productos */
+.products-container .card {
+  max-width: none; /* Deja que la grilla controle el ancho */
+  height: 100%; /* Hace que todas midan igual de alto en la fila */
 }

@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
   if (!ItemDetail) return <p>Producto no encontrado</p>;
 
   return (
-    <section>
+    <section className="section-item-detail-container">
       <h1>Detalle del Producto</h1>
       <div className="products-container">
         <ItemDetail item={itemDetail} />
