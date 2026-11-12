@@ -28,7 +28,10 @@ export const Dashboard = () => {
         setProducts(products.filter((product) => product.id !== id));
       })
       .catch((error) => setError(error))
-      .finally(() => setLoading(false));
+      .finally(
+        () => setLoading(false),
+        navigate(`/admin/products/success/delete/${id}`, { replace: true }),
+      );
   };
   const onClickEdit = (id) => {
     navigate(`/admin/product/edit/${id}`);
@@ -36,11 +39,11 @@ export const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <header>
-        <h2>Panel de administracion</h2>
+        <h2>Panel de administración</h2>
         <div>
           <Link to="/">Volver a la tienda</Link>
         </div>
-        <button onClick={logout}>Cerrar Sesion</button>
+        <button onClick={logout}>Cerrar Sesión</button>
       </header>
       <section className="action-section">
         <h3>Acciones rapidas</h3>
@@ -57,7 +60,7 @@ export const Dashboard = () => {
       </section>
       <section className="help-section">
         <h3>Ayuda</h3>
-        <p>Dede este panel poder gestionar los productos de la tienda.</p>
+        <p>Desde este panel poder gestionar los productos de la tienda.</p>
       </section>
     </div>
   );

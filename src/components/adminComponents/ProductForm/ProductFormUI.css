@@ -1,0 +1,20 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+  justify-content: center;
+  align-items: center;
+}
+.form-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 30rem;
+  gap: 1rem;
+  border: 2px inset #88898a;
+  padding: 1rem;
+}

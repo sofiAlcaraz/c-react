@@ -15,6 +15,6 @@
   flex-direction: column;
   max-width: 30rem;
   gap: 1rem;
-  border-radius: 2px solid #3498db;
+  border: 2px inset #88898a;
   padding: 1rem;
 }

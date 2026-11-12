@@ -5,7 +5,7 @@ import { ProductFormUI } from "./ProductFormUI";
 import { uploadImage } from "../../../services/uploadImage";
 import { validateProduct } from "../../../utils/validateProduct";
 
-export const ProductFormContainer = () => {
+export const ProductFormContainer = ({ title }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -71,6 +71,7 @@ export const ProductFormContainer = () => {
       onChange={handleChange}
       onFileChange={handleFileChange}
       onSubmit={handleSubmit}
+      title={title}
     />
   );
 };

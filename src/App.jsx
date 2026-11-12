@@ -37,9 +37,24 @@ function App() {
           {/*El index de admin es ir al dashboard */}
           <Route index element={<Navigate to={"dashboard"} />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="products/new" element={<ProductFormContainer />} />
-          <Route path="products/success/:id" element={<ProductSuccess />} />
-          <Route path="product/edit/:id" element={<ProductEdit />} />
+          <Route
+            path="products/new"
+            element={<ProductFormContainer title={"Agregar producto"} />}
+          />
+          <Route
+            path="products/success/delete/:id"
+            element={<ProductSuccess title={"Producto Eliminado con exito"} />}
+          />
+          {/*Hay otra forma de reutilizarlo?*/}
+          <Route
+            path="products/success/:id"
+            element={<ProductSuccess title={"Producto Agregado con exito"} />}
+          />
+          <Route
+            path="product/edit/:id"
+            element={<ProductEdit title={"Editar de producto"} />}
+          />
+          {/*en cuanto a la propiedad title, En este caso me conviene hacerlo asi? o revisar si la url es edit o new y decidirlo en ProductFormContainer */}
         </Route>
       </Routes>
     </>

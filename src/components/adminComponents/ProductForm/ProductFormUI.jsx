@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import "./ProductFormUI.css";
+
 export const ProductFormUI = ({
   product,
   errors,
@@ -5,13 +8,19 @@ export const ProductFormUI = ({
   onChange,
   onFileChange,
   onSubmit,
+  title,
 }) => {
   return (
-    <section>
-      <form className="product-form" onSubmit={onSubmit}>
-        <h2>Agregar nuevo producto</h2>
+    <section className="container">
+      <header>
         <div>
-          <label>Nombre:</label>
+          <Link to="/admin/dashboard">Volver</Link>
+        </div>
+      </header>
+      <form className="form-product" onSubmit={onSubmit}>
+        <h2>{title}</h2>
+        <div>
+          <label>Nombre: </label>
           <input
             type="text"
             name="name"
@@ -21,7 +30,7 @@ export const ProductFormUI = ({
           {errors.name && <p>{errors.name}</p>}
         </div>
         <div>
-          <label>Precio:</label>
+          <label>Precio: </label>
           <input
             type="numbre"
             name="price"
@@ -31,7 +40,7 @@ export const ProductFormUI = ({
           {errors.price && <p>{errors.price}</p>}
         </div>
         <div>
-          <label>Categoria:</label>
+          <label>Categoria: </label>
           <input
             type="text"
             name="category"
@@ -41,7 +50,7 @@ export const ProductFormUI = ({
           {errors.category && <p>{errors.category}</p>}
         </div>
         <div>
-          <label>Descripcion:</label>
+          <label>Descripcion: </label>
           <input
             type="text"
             name="description"
@@ -50,10 +59,12 @@ export const ProductFormUI = ({
           />
           {errors.description && <p>{errors.description}</p>}
         </div>
-        <div>
-          <label>Imagen:</label>
-          <input type="file" accept="image/*" onChange={onFileChange} />
-          {errors.file && <p>{errors.file}</p>}
+        <div className="img-container">
+          <label>Imagen: </label>
+          <div className="img-content">
+            <input type="file" accept="image/*" onChange={onFileChange} />
+            {errors.file && <p>{errors.file}</p>}
+          </div>
         </div>
 
         <button type="submit" disabled={loading}>

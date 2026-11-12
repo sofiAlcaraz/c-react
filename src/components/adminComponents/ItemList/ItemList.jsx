@@ -1,12 +1,12 @@
 import "./ItemList.css";
 const ItemList = ({ products, onClickRemove, onClickEdit }) => {
   if (!products) {
-    return <p>no hay productos</p>;
+    return <p>No hay productos...</p>;
   }
   return (
     <ul className="products-list-container">
       {products.map((product) => (
-        <li key={product.name} className="products-list-item">
+        <li key={product.id} className="products-list-item">
           <p>{product.name}</p>
           <p>{product.id}</p>
           <div className="button-container">

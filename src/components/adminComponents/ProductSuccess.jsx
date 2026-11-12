@@ -1,14 +1,14 @@
 import { Link, useParams } from "react-router-dom";
 
-export const ProductSuccess = () => {
+export const ProductSuccess = ({ title }) => {
   const { id } = useParams();
   return (
     <section>
-      <h2>Producto cargado con exito</h2>
+      <h2>{title}</h2>
       <p>Id del producto: {id}</p>
-      <p>Puede cargar otro haciendo click en el boton</p>
+      <p>Puede cargar o eliminar otro producto haciendo click en el botón</p>
       <div>
-        <Link to={`/admin`}>Cargar otro producto</Link>
+        <Link to={`/admin`}>Volver a productos</Link>
       </div>
     </section>
   );
